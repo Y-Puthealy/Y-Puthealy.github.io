@@ -1,8 +1,8 @@
-// const url = 'https://data.opendevelopmentcambodia.net/en/api/3/action/datastore_search';
-// const resourceId = '50d26fc8-e451-4486-9252-6cdf09a34fea';
-// const limit = 500;
+const url = 'https://data.opendevelopmentcambodia.net/en/api/3/action/datastore_search';
+const resourceId = '50d26fc8-e451-4486-9252-6cdf09a34fea';
+const limit = 500;
 
-// const datasetUrl = url + '?resource_id=' + resourceId + '&limit=' + limit;
+const datasetUrl = url + '?resource_id=' + resourceId + '&limit=' + limit;
 
 let projects = [];
 
@@ -15,7 +15,7 @@ function setHeight(chart) {
 }
 
 try {
-  d3.json("https://raw.githubusercontent.com/Y-Puthealy/hello/main/fim.geojson").then(data => {
+  d3.json(datasetUrl).then(data => {
     let records = data.features;
 
     records.forEach(record => {
