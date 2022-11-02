@@ -20,7 +20,7 @@ const stadiaAlidadeSmooth = L.tileLayer(stadiaAlidadeSmoothUrl, {
 
 let basemaps = {
   'Open Street Map Mapnik': osmMapnik,
-  'Stadia Alidade Smooth': stadiaAlidadeSmooth,
+//   'Stadia Alidade Smooth': stadiaAlidadeSmooth,
 }
 
 L.control.layers(basemaps).addTo(map);
