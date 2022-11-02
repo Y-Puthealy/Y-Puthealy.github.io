@@ -10,13 +10,13 @@ const osmMapnik = L.tileLayer(osmMapnikUrl, {
   attribution: osmMapnikAttrib
 })
 
-const stadiaAlidadeSmoothUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png';
-const stadiaAlidadeSmoothAttrib = '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+// const stadiaAlidadeSmoothUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png';
+// const stadiaAlidadeSmoothAttrib = '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
 
-const stadiaAlidadeSmooth = L.tileLayer(stadiaAlidadeSmoothUrl, {
-  maxZoom: 19,
-  attribution: stadiaAlidadeSmoothAttrib
-})
+// const stadiaAlidadeSmooth = L.tileLayer(stadiaAlidadeSmoothUrl, {
+//   maxZoom: 19,
+//   attribution: stadiaAlidadeSmoothAttrib
+// })
 
 let basemaps = {
   'Open Street Map Mapnik': osmMapnik,
@@ -25,11 +25,11 @@ let basemaps = {
 
 L.control.layers(basemaps).addTo(map);
 
-map.addLayer(stadiaAlidadeSmooth);
+map.addLayer(osmMapnik);
 
-let stadiaAlidadeSmoothMini = L.tileLayer(stadiaAlidadeSmoothUrl, {
+let stadiaAlidadeSmoothMini = L.tileLayer(osmMapnikUrl, {
   maxZoom: 20,
-  attribution: stadiaAlidadeSmoothAttrib
+  attribution: osmMapnikAttrib
 })
 
 let miniMap = new L.Control.MiniMap(stadiaAlidadeSmoothMini, {
