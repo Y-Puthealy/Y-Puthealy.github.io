@@ -121,7 +121,7 @@ try {
       .fitOnRedraw(true)
       .filterByArea(true)
       .cluster(true)
-      .legend(dc.leafletLegend().position("bottomright"))
+//       .legend(dc.leafletLegend().position("bottomright"))
       .popup(d => {
         return '<p>Developer: <a target="_blank" href="' + d.value.project_url + '">' + d.value.developer + '</a></p>' +
               '<p>Capital Investment: USD ' + d.value.investment_mm + ' million</p>' +
